@@ -1,0 +1,124 @@
+Задачи за самоподготовка
+int isLetter(char c)
+{
+return (c >= 'a' && c <= 'z')
+||(c >= 'A' && c <= 'z');
+}
+Задачи за самоподготовка
+Отговор
+Задача 11. Аритметични оператори
+#include <stdio.h>
+int main()
+{
+ int iX = 13;
+ int iY = 44;
+ int iResult = 0;
+ iResult = iX - iY;
+ printf("%d - %d = %d \n", iX, iY, iResult);
+ iResult = iY / iX;
+ printf("%d / %d = %d \n", iY, iX, iResult);
+ iResult = iY % iX;
+ printf("%d / %d Remainder: %d\n", iY, iX, iResult);
+ /* homework: examples for '*' и '+', float - използвайте вместо int
+*/
+ return 0;
+}Задачи за самоподготовка
+ Упражнение 12. Оператори за присвояване
+# include <stdio.h>
+int main() {
+ int nResult = 13; /* опитайте с други стойности */
+ int nX = 4;
+ printf("Result = %d\n", nResult);
+ nResult += nX;
+ printf("Result += %d -> %d\n", nX, nResult);
+ nResult = 1;
+ nResult <<= nX;
+ printf("Result <<= %d -> %d\n", nX, nResult);
+} /* използвайте и други оператори за присвояване */
+Задачи за самоподготовка
+ Упражнение 13. Increment / decrement operators
+#include <stdio.h>
+int main() {
+ int iCounter = 0;
+ while( ++ iCounter < 3 ) {
+ printf("Counter %d\n", iCounter);
+ printf("++ Counter: %d\n", ++ iCounter);
+ printf("-- Counter: %d\n", -- iCounter);
+ printf("Counter ++: %d\n", iCounter ++);
+ printf("Counter --: %d\n", iCounter --);
+ }
+ return 0;
+}
+Задачи за самоподготовка
+ Упражнение 14. Relational operators
+#include <stdio.h>
+int main() {
+ int nX = 33; /* homework, input with scanf */
+ int nY = 20;
+ if (nX == nY) {
+ printf("%d and %d are equal\n", nX, nY);
+ } else {
+ printf("%d and %d are not equal\n", nX, nY);
+ }
+ if (nX > nY) { printf("%d is greater than %d\n", nX, nY);
+}
+} /* използвайте и останалите оператори за сравнение */
+Задачи за самоподготовка
+ Упражнение 15. Логически оператори
+#include <stdio.h>
+int main() {
+ int nA = 40; /* използвайте scanf */
+ int nB = 20;
+ int nX = 20;
+ int nY = 30;
+ if ( nA > nB && nA !=0 ) {
+ printf("&& Operator : Both conditions are true\n");
+ }
+Задачи за самоподготовка
+
+ if ( nX > nY || nY != 20) {
+ printf("|| Operator : Only one condition is true\n");
+ }
+ if ( ! (nA > nB && nB !=0 ) ) {
+ printf(" ! Operator : Both conditions are true\n");
+ } else {
+ printf("Both conditions are true.\n");
+ }
+}
+/* опитайте различни комбинации*/
+Задачи за самоподготовка
+Упражнение 16. Оператор за вземане на адрес (&) и дереференция (*)
+#include <stdio.h>
+int main()
+{
+ int iA = 13;
+ int* pValue = NULL; /* pointer to int */
+ pValue = &iA; /* assigning address of iA to the pointer
+*/
+ printf("\nAddress of variable iA is: %p\n", pValue);
+ printf("\nValue of variable iA is: %d\n", *pValue);
+ return 0;
+}
+Задачи за самоподготовка
+ Упражнение 17* Направете генератор на случайни числа по следния
+алгоритъм (xorshift):
+ int A = 1, акумулатор с начална стойност
+ При всяко вземане на число от генератора се прави следното:
+ (i) A ^= A << 13;
+ (ii) A ^= A >> 17;
+ (iii) A ^= A << 5;
+При всяка итерация изведете числото на екрана.
+(Направете вариация с акумулатор long long int)
+Задачи за самоподготовка
+Упражнение 18* Направете бягаща светлина, като приемете, че всеки бит от
+дадена променлива, е свързан с лампа (или светодиод). Когато битът е
+нула, лампата не свети, когато е единица свети.
+Примерно, ако генерирате последователност:
+1, 2, 3, 4, се получава следното:
+1 *....................
+2 .*...................
+4 ..*..................
+8 ...*................. ...
+За да генерирате закъснение, използвайте следната функция от C runtime:
+#include <unistd.h>
+unsigned int sleep(unsigned int seconds);

@@ -1,0 +1,566 @@
+Test
+test
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+1999
+1
+WAUBH78E06A115188
+ -> Color: black
+ -> Fuel type: diesel
+ -> Fuel economy l/100km:
+    * Urban - 5
+    * Extra-urban - 5
+    * Combined - 5
+ -> Extras and conveniences:
+    * seats - 5
+    * gearbox - manual
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+2
+8500
+9
+44.000000
+
+Mitsubishi
+Accord
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 3
+ -> Fuel type: 33
+ -> Fuel economy l/100km:
+    * Urban - 3
+    * Extra-urban - 
+    * Combined - 
+ -> Extras and conveniences:
+    * seats - 
+    * gearbox - 
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+1
+2222
+8
+34.549999
+
+Honda
+HR-V
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+1
+3333
+1
+0.000000
+
+Toyota
+Prius
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+3
+4444
+2
+0.000000
+
+Toyota
+Avensis
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+4
+5555
+2
+0.000000
+
+Alfa Romeo
+147
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+3
+6666
+3
+0.000000
+
+Alfa Romeo
+Brera
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+5
+7777
+3
+0.000000
+
+Alfa Romeo
+156 Sports Wagon 
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+3
+8888
+3
+0.000000
+
+Moskvich
+Aleko
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+1
+9999
+4
+0.000000
+
+Fiat
+Panda
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+1
+1222
+5
+0.000000
+
+Fiat
+Punto
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Color: 'Sky blue'
+ -> Fuel type: Diesel.
+ -> Fuels economy :
+    * Urban - 10l/100km
+    * Extra-urban - 5l/100km
+    * Combined - 7l/100km
+
+ -> Extras and conveniences:
+    * 5 seats
+    * hatch-back
+    * manual gearbox
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+0
+1333
+5
+65.000000
+
+Lincoln
+LL
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Year: 1986
+ -> Color: d
+ -> Fuel type: d
+ -> Fuel economy l/100km:
+    * Urban - 3
+    * Extra-urban - 3
+    * Combined - 3
+ -> Extras and conveniences:
+    * seats - 5
+    * gearbox - manual
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+1
+6819
+6
+567.000000
+
+Lincoln
+KK
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+0
+0
+
+-> Year: 23
+ -> Color: 3
+ -> Fuel type: 3
+ -> Fuel economy l/100km:
+    * Urban - 3
+    * Extra-urban - 3
+    * Combined - 3
+ -> Extras and conveniences:
+    * seats - 3
+    * gearbox - 3
+    * AC
+    * power windows
+    * roofhatch
+    * EPS
+    * ABS
+    * Anti-theft system
+    * navigation
+    * cruise control;
+2
+9674
+6
+23.000000
+

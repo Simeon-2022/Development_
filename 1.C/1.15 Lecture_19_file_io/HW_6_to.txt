@@ -1,0 +1,5 @@
+(Name: AAAA AAAAA AAAAAAAA, PIN: 11111, Licence category A)
+(Name: BBBB BBBBB BBBBBBBB, PIN: 22222, Licence category BC)
+(Name: CCCC CCCCC CCCCCCCC, PIN: 33333, Licence category AA)
+(Name: DDDD DDDDD DDDDDDDD, PIN: 44444, Licence category DD)
+(Name: XXXX EEEEE EEEEEEEE, PIN: 55555, Licence category A)
