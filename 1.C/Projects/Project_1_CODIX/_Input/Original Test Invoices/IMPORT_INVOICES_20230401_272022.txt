@@ -1,0 +1,9 @@
+7
+
+               IRINA   FN1234520230103BGN      345.78
+                NENO   FN2345620221220USD          35
+             IVELINA   FN2333420221228BGN         500
+              MILENA   FN0009820230104EUR       75.25
+		 MARIYA   FN0008500220105EUR      	7888
+
+956.03

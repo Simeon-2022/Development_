@@ -1,0 +1,43 @@
+_tprintf, _fputts, _tputs, _tscanf, _ftprintf and _ftscanf instead
+
+FILE* fp_file_open(FILE* fp_, TCHAR* directory_path) {
+
+#ifdef UNICODE
+	fp_ = _wfopen(directory_path, L"r");
+#else
+	fp_ = fopen(directory_path, "r");
+#endif
+
+	if (fp_ == NULL)
+	{
+		puts("Error reading file");
+		exit(EXIT_FAILURE);
+	}
+	return fp_;
+}
+
+//check rows and count and length
+
+while (fgets(words, sizeof(words), fp_FROM) != NULL) {
+		rowCount++;
+		if ((strlen(words) != ROW_LENGTH) && (rowCount > 1 && rowCount < doc_rows))
+		{
+			printf("Content validation failed: Row length (%d) mismatch on line %d", ROW_LENGTH, rowCount);
+			break;
+		}
+		if (rowCount > doc_rows)
+		{
+			printf("Content validation failed: Total allowed rows (%d) exceeded", doc_rows);
+			break;
+		}
+		/*if (rowCount > 1)
+		{
+			long var = 55;
+			fseek(fp_FROM, -INV_NAME, SEEK_CUR);
+
+
+		}*/
+		//fseek(fp_FROM, 0L, SEEK_END);
+
+		fputs(words, stdout);
+	}
