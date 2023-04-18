@@ -1,0 +1,79 @@
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcSql.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcErrorHandling.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sqlca.h>
+#include <sqlcpr.h>
+#include <stdlib.h>
+#include <time.h>
+#include <errno.h>
+
+EXEC SQL BEGIN DECLARE SECTION; //declare host variables
+char g_UserID[64];
+EXEC SQL END DECLARE SECTION;
+
+
+//Error handling of SQL errors
+void sql_error(const char* message) 
+{
+    unsigned char strBuf[BUFSIZ] = { 0 };
+    size_t szBufLen = 0;
+    size_t szMsgLen = 0;
+
+    EXEC SQL WHENEVER SQLERROR CONTINUE;
+    EXEC SQL ROLLBACK;
+
+    szBufLen = sizeof(strBuf);
+    sqlglm(strBuf, &szBufLen, &szMsgLen);
+    strBuf[szMsgLen -1] = '\0';
+    ERROR_LOG_MSG("Rollback transaction" ,strBuf);
+    OUTPUT_LOG_MSG("Rollback transaction" , strBuf);
+}
+
+//Connect to Oracle Data Base
+void connect_oracle(const char* strUserID)
+{
+	//handle errors
+	EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_1);
+
+    //connect to Oracle
+    strcpy(g_UserID, strUserID);
+    EXEC SQL CONNECT :g_UserID;
+    if (0 != sqlca.sqlcode) 
+    {
+        ERROR_LOG_MSG(program.programName, ORA_ERR_FORMAT_1);
+        exit(EXIT_FAILURE);
+    }
+    OUTPUT_LOG_MSG(program.programName, ORA_MSG_FORMAT_3);
+}
+
+//commit transaction
+void exec_commit(void)
+{
+    //handle errors
+    EXEC SQL WHENEVER SQLERROR do sql_error(ORA_ERR_FORMAT_4);
+
+    EXEC SQL COMMIT;
+    if (0 != sqlca.sqlcode) 
+    {
+        ERROR_LOG_MSG(program.programName, ORA_ERR_FORMAT_4);
+    }
+    OUTPUT_LOG_MSG(program.programName, ORA_MSG_FORMAT_6);
+}
+
+//commit all
+void exec_commit_all(void)
+{
+    //handle errors
+    EXEC SQL WHENEVER SQLERROR do sql_error(ORA_ERR_FORMAT_4);
+
+    EXEC SQL COMMIT WORK RELEASE;
+    if (0 != sqlca.sqlcode) 
+    {
+        ERROR_LOG_MSG(program.programName, ORA_ERR_FORMAT_4);
+    }
+    OUTPUT_LOG_MSG(program.programName, ORA_MSG_FORMAT_7);
+}
+
+

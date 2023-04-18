@@ -1,0 +1,60 @@
+[ERROR][18-04-2023 08:58:16] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][18-04-2023 08:58:16] Error during updating! 	(Error code 0 - Success)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][18-04-2023 08:58:16] IMP_CUSTOMER_DATA_20230214183755.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:16] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg
+
+[ERROR][18-04-2023 08:58:18] Rollback transaction: ORA-04036: PGA memory used by the instance exceeds PGA_AGGREGATE_LIMIT
+[ERROR][18-04-2023 08:58:24] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][18-04-2023 08:58:24] Error during updating! 	(Error code 0 - Success)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][18-04-2023 08:58:24] IMP_CUSTOMER_DATA_20230214183758.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:24] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg2;
+
+[ERROR][18-04-2023 08:58:25] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][18-04-2023 08:58:25] Error during updating! 	(Error code 0 - Success)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][18-04-2023 08:58:25] IMP_CUSTOMER_DATA_20230214183758.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:25] : line 3: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg3;
+
+[ERROR][18-04-2023 08:58:27] Line is NOT IMPORTED!: Contains wrong character in IntRef!
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 1: 01; ;EXT3427;VALENTIN;MILANOV;m;SOFIA;BULGARIA;998;v-milanov@jjj.gg1;
+
+[ERROR][18-04-2023 08:58:27] Line is NOT IMPORTED!: Contains wrong character in city!
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg2;
+
+[ERROR][18-04-2023 08:58:27] Line is NOT IMPORTED!: Contains wrong character in city!
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 3: 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg3;
+
+[ERROR][18-04-2023 08:58:27] Rollback transaction: ORA-03114: not connected to ORACLE
+[ERROR][18-04-2023 08:58:27] Error during selection! 	(Error code 0 - Success)
+	Error in line 295 in file ../7_Library/ProCsource/insertInvoice.c
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 4: 02;EXT3427;15022023;60.00;BGN;
+
+[ERROR][18-04-2023 08:58:27] Rollback transaction: ORA-03114: not connected to ORACLE
+[ERROR][18-04-2023 08:58:27] Error during selection! 	(Error code 0 - Success)
+	Error in line 235 in file ../7_Library/ProCsource/insertInvoice.c
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 5: 02;EXT3427;17022023;20.00;BGN;
+
+[ERROR][18-04-2023 08:58:27] Rollback transaction: ORA-03114: not connected to ORACLE
+[ERROR][18-04-2023 08:58:27] Incorrect payment: Customer does not exist
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 6: 03;EXT3427;16022023;71;BankTransf;BGN;
+
+[ERROR][18-04-2023 08:58:27] Rollback transaction: ORA-03114: not connected to ORACLE
+[ERROR][18-04-2023 08:58:27] Incorrect payment: Customer does not exist
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 7: 03;EXT3427;16022023;72;BankTransf;BGN;
+
+[ERROR][18-04-2023 08:58:27] Rollback transaction: ORA-03114: not connected to ORACLE
+[ERROR][18-04-2023 08:58:27] Incorrect payment: Customer does not exist
+[ERROR][18-04-2023 08:58:27] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 08:58:27] : line 8: 03;EXT3427;16022023;73;BankTransf;BGN
+
+[ERROR][18-04-2023 08:58:27] Rollback transaction: ORA-01012: not logged o
+[ERROR][18-04-2023 08:58:27] PROG_INSERT_FILE: Error during commiting!

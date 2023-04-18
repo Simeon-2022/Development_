@@ -1,0 +1,4 @@
+[ERROR][18-04-2023 09:02:12] Error during fetching cursor! 	(Error code 0 - Success)
+	Error in line 669 in file ../7_Library/ProCsource/Overpayments.c
+[ERROR][18-04-2023 09:02:14] Error during fetching cursor! 	(Error code 0 - Success)
+	Error in line 669 in file ../7_Library/ProCsource/Overpayments.c

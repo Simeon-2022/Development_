@@ -1,0 +1,2 @@
+[ERROR][18-04-2023 09:09:20] Rollback transaction: ORA-00942: table or view does not exist
+[ERROR][18-04-2023 09:09:20] Rollback transaction: ORA-01002: fetch out of sequence

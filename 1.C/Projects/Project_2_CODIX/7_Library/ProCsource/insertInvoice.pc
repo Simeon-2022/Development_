@@ -1,0 +1,72 @@
+#include "/media/sf_Shared/Final_project/7_Library/Headers/insertPayment.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcErrorHandling.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcSql.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/configMacro.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/utility.h"
+#include <stdio.h>
+#include <sqlca.h>
+#include <ctype.h>
+#include <sqlcpr.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <oraca.h>
+	
+int insertInvoice(struct sInvoice* invoice)
+{
+	EXEC SQL BEGIN DECLARE SECTION;
+	char externalReference[MAX_EXTERNAL_REF_LENGHT] = {0};
+	char issueDate[MAX_DATE_LENGHT] = {0};
+	char invCurrency[MAX_LINE_CURRENCY_LENGHT] = {0};
+	double invoiceAmt = 0.00;
+    char newInv_no[MAX_INVOICE_NUMBER_LENGHT] = {0};	
+	int customer_id = 0;
+	int maxSeq = 1;
+    EXEC SQL END DECLARE SECTION;
+
+    //Copy values from invoice structure to SQL variables 
+    strcpy(externalReference, invoice->strExternInvoiceRef);
+    strcpy(issueDate, invoice->strInvoiceDate);
+    strcpy(invCurrency, invoice->cpCurrency);
+    invoiceAmt = invoice->dInvoiceAmt;
+
+    //Find the customer with the given external reference
+	EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_12);
+    EXEC SQL SELECT customer_id INTO :customer_id
+	FROM customers
+	WHERE external_reference = :externalReference;
+	if (sqlca.sqlcode != 0) 
+	{
+		OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+		ERROR_PRINT(ORA_ERR_FORMAT_7);
+		return 0;  
+	}
+	
+    //Find the customer's highest sequence number
+	EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_7);
+    EXEC SQL SELECT (MAX(seq) + 1) INTO :maxSeq
+	FROM invoices
+	WHERE customer_id = :customer_id;
+	if (sqlca.sqlcode != 0)
+	{
+		OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+		ERROR_PRINT(ORA_ERR_FORMAT_7);
+		return 0;
+	}
+	convertDateFormatToYYYYMMDD(issueDate);
+	sprintf(newInv_no, "%d_%d_%s", customer_id,maxSeq,issueDate);
+    EXEC SQL INSERT INTO invoices( inv_no, amount, amount_due, currency , issue_date, customer_id, seq)
+								VALUES(:newInv_no, :invoiceAmt, :invoiceAmt, :invCurrency, TO_DATE(:issueDate, 'YYYYMMDD'),:customer_id, :maxSeq);
+
+	if (sqlca.sqlcode == 0)
+	{
+		OUTPUT_LOG_MSG("Insert new invoice for customer", externalReference);
+	}
+	else
+	{
+		OUTPUT_LOG_MSG("Insert invoice failed for customer", externalReference);
+		ERROR_LOG_MSG("Insert invoice failed for customer", externalReference);
+    }
+	exec_commit();
+    return 1;
+}

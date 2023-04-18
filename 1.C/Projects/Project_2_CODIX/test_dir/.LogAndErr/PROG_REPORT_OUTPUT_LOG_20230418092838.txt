@@ -1,0 +1,12 @@
+[18-04-2023 09:28:38] PROG_REPORT: Create directory /.LogErr
+[18-04-2023 09:28:40] PROG_REPORT: Connected to DB
+
+[18-04-2023 09:28:40] Create report for period: 
+[18-04-2023 09:28:40] 01012020: 01032023
+[18-04-2023 09:28:40] PROG_REPORT: Create directory /Report
+[18-04-2023 09:28:45] Rollback transaction: ORA-04036: PGA memory used by the instance exceeds PGA_AGGREGATE_LIMIT
+[18-04-2023 09:28:45] PROG_REPORT: Open cursor
+[18-04-2023 09:28:45] Rollback transaction: ORA-01002: fetch out of sequence
+[18-04-2023 09:28:45] PROG_REPORT: Close cursor
+[18-04-2023 09:28:45] PROG_REPORT: Commit work release
+[18-04-2023 09:28:45] PROG_REPORT: Program executed successfully!

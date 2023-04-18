@@ -1,0 +1,30 @@
+[ERROR][23-03-2023 09:08:24] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][23-03-2023 09:08:24] Error during updating! 	(Error code 2 - No such file or directory)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Line is NOT IMPORTED!
+[ERROR][23-03-2023 09:08:24] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg
+
+[ERROR][23-03-2023 09:08:24] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][23-03-2023 09:08:24] Error during updating! 	(Error code 2 - No such file or directory)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183758.txt: Line is NOT IMPORTED!
+[ERROR][23-03-2023 09:08:24] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg2;
+
+[ERROR][23-03-2023 09:08:25] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][23-03-2023 09:08:25] Error during updating! 	(Error code 2 - No such file or directory)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Line is NOT IMPORTED!
+[ERROR][23-03-2023 09:08:25] : line 3: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg3;
+
+[ERROR][23-03-2023 09:08:25] Line is NOT IMPORTED!: Contains wrong character in IntRef!
+[ERROR][23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][23-03-2023 09:08:25] : line 1: 01; ;EXT3427;VALENTIN;MILANOV;m;SOFIA;BULGARIA;998;v-milanov@jjj.gg1;
+
+[ERROR][23-03-2023 09:08:25] Line is NOT IMPORTED!: Contains wrong character in city!
+[ERROR][23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][23-03-2023 09:08:25] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg2;
+
+[ERROR][23-03-2023 09:08:25] Line is NOT IMPORTED!: Contains wrong character in city!
+[ERROR][23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][23-03-2023 09:08:25] : line 3: 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg3;
+

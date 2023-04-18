@@ -1,0 +1,9 @@
+[18-04-2023 09:05:19] PROG_REPORT: Create directory /.LogErr
+[18-04-2023 09:05:20] PROG_REPORT: Connected to DB
+
+[18-04-2023 09:05:20] Create report for customer_External_reference: EXT7                                                        
+[18-04-2023 09:05:20] PROG_REPORT: Create directory /Report
+[18-04-2023 09:05:21] PROG_REPORT: Open cursor
+[18-04-2023 09:05:21] PROG_REPORT: Close cursor
+[18-04-2023 09:05:21] PROG_REPORT: Commit work release
+[18-04-2023 09:05:21] PROG_REPORT: Program executed successfully!

@@ -1,0 +1,166 @@
+#include "/media/sf_Shared/Final_project/7_Library/Headers/insertCustomer.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcErrorHandling.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcSql.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/configMacro.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/utility.h"
+#include <sqlca.h>
+#include <sqlcpr.h>
+
+#define AFFECTED_ROWS (int)(sqlca.sqlerrd[2])
+
+int insertCustomer(struct sCustomer* customer)
+{
+	EXEC SQL BEGIN DECLARE SECTION;
+		int		c_CustomerID = 0;
+		char	c_FirstName[MAX_NAME_LENGHT] = {0};
+		char	c_FamilytName[MAX_NAME_LENGHT] = {0};
+		char	c_Sex[MAX_LINE_GENDER_LENGHT] = { 0 };
+		char	c_City[MAX_CITY_LENGHT] = {0};
+		short	c_CityInd =  0;
+		char	c_Country[MAX_COUNTRY_LENGHT] = {0};
+		int		c_CreditLimit = 0;
+		char	c_Email[MAX_EMAIL_LENGHT] = {0};
+		char	c_ExternalReference[MAX_EXTERNAL_REF_LENGHT] = {0};
+		int		isValidExtRef = 0;
+		int		isValidIntRef = 0;
+		char    oldCity[MAX_CITY_LENGHT] = {0};
+	EXEC SQL END DECLARE SECTION;
+
+	c_CustomerID = customer->iInternCustRef;
+	strcpy(c_FirstName, customer->strFirstName);
+	strcpy(c_FamilytName, customer->strLastName);
+	strcpy(c_Sex, customer->cpGender);
+	strcpy(c_City, customer->strCity);
+	strcpy(c_Country, customer->strCountry);
+	c_CreditLimit = customer->iCreditLimit;
+	strcpy(c_Email, customer->strEmail);
+	strcpy(c_ExternalReference, customer->strExternCustRef);
+
+	if (c_CustomerID != 0)
+	{
+		EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_7);
+		EXEC SQL SELECT COUNT(*) INTO :isValidIntRef FROM customers WHERE customer_id = :c_CustomerID;
+		if (sqlca.sqlcode != 0)
+		{
+			OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+			ERROR_PRINT(ORA_ERR_FORMAT_7);
+			return 0;
+		}
+		if (isValidIntRef == 0)
+		{
+			OUTPUT_LOG_MSG(program.programName, "Invalid customer_id!");
+			ERROR_LOG_MSG(program.programName, "Invalid customer_id!");
+			return 0;
+		}
+		EXEC SQL SELECT adr_city INTO :oldCity:c_CityInd FROM customers WHERE customer_id = :c_CustomerID;
+		if (sqlca.sqlcode != 0)
+		{
+			OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+			ERROR_PRINT(ORA_ERR_FORMAT_7);
+		}
+		//Customer_id exists in DB -> update record
+		EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_11);
+		if (!strcmp(c_City, ""))
+		{
+			nullTerminateString(oldCity);
+			strcpy(c_City, oldCity);
+		}
+		EXEC SQL UPDATE customers SET first_name = :c_FirstName,
+								   	  family_name = :c_FamilytName,
+								   	  sex = :c_Sex,
+								   	  adr_city = :c_City,
+								   	  adr_country = :c_Country,
+								   	  credit_limit = :c_CreditLimit,
+								   	  email = :c_Email,
+									  external_reference = :c_ExternalReference
+								WHERE customer_id = :c_CustomerID;
+		if (AFFECTED_ROWS == 0)
+		{
+			OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_11);
+			ERROR_PRINT(ORA_ERR_FORMAT_11);
+			return 0;
+		}
+		OUTPUT_LOG_MSG("Updated customer", c_ExternalReference);
+	}
+	else
+	{
+		//g_c_CustomerID == 0
+		EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_7);
+		EXEC SQL SELECT COUNT(*) INTO :isValidExtRef FROM customers WHERE external_reference = :c_ExternalReference;
+		if (sqlca.sqlcode != 0)
+		{
+			OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+			ERROR_PRINT(ORA_ERR_FORMAT_7);
+			return 0;
+		}		
+		if (isValidExtRef == 1)
+		{
+			EXEC SQL SELECT adr_city INTO :oldCity:c_CityInd FROM customers WHERE external_reference = :c_ExternalReference;
+			if (sqlca.sqlcode != 0)
+			{
+				OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+				ERROR_PRINT(ORA_ERR_FORMAT_7);
+			}
+			if (!strcmp(c_City, ""))
+			{
+				nullTerminateString(oldCity);
+				strcpy(c_City, oldCity);
+			}
+			//External_refference exists in DB -> update record
+			EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_11);
+			EXEC SQL UPDATE customers SET first_name = :c_FirstName,
+										  family_name = :c_FamilytName,
+										  sex = :c_Sex,
+										  adr_city = :c_City,
+										  adr_country = :c_Country,
+										  credit_limit = :c_CreditLimit,
+										  email = :c_Email
+									WHERE external_reference = :c_ExternalReference;
+			if (AFFECTED_ROWS == 0)
+			{
+				OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_11);
+				ERROR_PRINT(ORA_ERR_FORMAT_11);
+				return 0;
+			}
+			OUTPUT_LOG_MSG("Updated customer", c_ExternalReference);
+		}
+		else
+		{
+			EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_5);
+			EXEC SQL INSERT INTO customers(customer_id,
+										   first_name,
+										   family_name,
+										   sex,
+										   adr_city,
+										   adr_country,
+										   credit_limit,
+										   email,
+										   external_reference)
+								   VALUES( customers_seq.NEXTVAL,
+										  :c_FirstName,
+										  :c_FamilytName,
+										  :c_Sex,
+										  :c_City:c_CityInd,
+										  :c_Country,
+										  :c_CreditLimit,
+										  :c_Email,
+										  :c_ExternalReference);
+			if (AFFECTED_ROWS == 0)
+			{
+				OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_5);
+				ERROR_PRINT(ORA_ERR_FORMAT_5);
+				return 0;
+			}
+			OUTPUT_LOG_MSG("Insert new customer", c_ExternalReference);
+		}
+	}
+	EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_4);
+	exec_commit();
+	if (sqlca.sqlcode != 0)
+	{
+		OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_4);
+		ERROR_PRINT(ORA_ERR_FORMAT_4);
+		return 0;
+	}
+	return 1;
+}

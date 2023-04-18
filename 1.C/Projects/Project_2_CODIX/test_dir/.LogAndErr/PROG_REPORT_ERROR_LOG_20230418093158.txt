@@ -1,0 +1,2 @@
+[ERROR][18-04-2023 09:31:58] Rollback transaction: ORA-04036: PGA memory used by the instance exceeds PGA_AGGREGATE_LIMIT
+[ERROR][18-04-2023 09:31:58] Rollback transaction: ORA-01002: fetch out of sequence

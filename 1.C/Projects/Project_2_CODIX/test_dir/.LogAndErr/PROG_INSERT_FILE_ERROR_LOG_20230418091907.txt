@@ -1,0 +1,30 @@
+[ERROR][18-04-2023 09:19:07] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][18-04-2023 09:19:07] Error during updating! 	(Error code 0 - Success)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][18-04-2023 09:19:07] IMP_CUSTOMER_DATA_20230214183755.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 09:19:07] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg
+
+[ERROR][18-04-2023 09:19:08] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][18-04-2023 09:19:08] Error during updating! 	(Error code 0 - Success)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][18-04-2023 09:19:08] IMP_CUSTOMER_DATA_20230214183758.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 09:19:08] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg2;
+
+[ERROR][18-04-2023 09:19:08] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[ERROR][18-04-2023 09:19:08] Error during updating! 	(Error code 0 - Success)
+	Error in line 430 in file ../7_Library/ProCsource/insertCustomer.c
+[ERROR][18-04-2023 09:19:08] IMP_CUSTOMER_DATA_20230214183758.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 09:19:08] : line 3: 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg3;
+
+[ERROR][18-04-2023 09:19:08] Line is NOT IMPORTED!: Contains wrong character in IntRef!
+[ERROR][18-04-2023 09:19:08] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 09:19:08] : line 1: 01; ;EXT3427;VALENTIN;MILANOV;m;SOFIA;BULGARIA;998;v-milanov@jjj.gg1;
+
+[ERROR][18-04-2023 09:19:08] Line is NOT IMPORTED!: Contains wrong character in city!
+[ERROR][18-04-2023 09:19:08] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 09:19:08] : line 2: 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg2;
+
+[ERROR][18-04-2023 09:19:08] Line is NOT IMPORTED!: Contains wrong character in city!
+[ERROR][18-04-2023 09:19:08] IMP_CUSTOMER_DATA_20230214183759.txt: Line is NOT IMPORTED!
+[ERROR][18-04-2023 09:19:08] : line 3: 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg3;
+

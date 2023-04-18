@@ -1,0 +1,12 @@
+[18-04-2023 09:09:37] PROG_REPORT: Create directory /.LogErr
+[18-04-2023 09:09:39] PROG_REPORT: Connected to DB
+
+[18-04-2023 09:09:39] Create report for period: 
+[18-04-2023 09:09:39] 01012020: 01042023
+[18-04-2023 09:09:39] PROG_REPORT: Create directory /Report
+[18-04-2023 09:09:39] Rollback transaction: ORA-00942: table or view does not exist
+[18-04-2023 09:09:39] PROG_REPORT: Open cursor
+[18-04-2023 09:09:39] Rollback transaction: ORA-01002: fetch out of sequence
+[18-04-2023 09:09:39] PROG_REPORT: Close cursor
+[18-04-2023 09:09:39] PROG_REPORT: Commit work release
+[18-04-2023 09:09:39] PROG_REPORT: Program executed successfully!

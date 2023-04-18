@@ -1,0 +1,3 @@
+[18-04-2023 08:56:48] PROG_INSERT_FILE: Create directory .LogErr
+[18-04-2023 08:56:48] PROG_INSERT_FILE: Initialize a vector vecFilenames to hold the correct filenames
+[18-04-2023 08:56:48] PROG_INSERT_FILE: vecFilenames is empty. There is no files with correct name in the directory!

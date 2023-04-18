@@ -1,0 +1,242 @@
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcReport.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcErrorHandling.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcOpenCloseFile.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/configMacro.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcDirFileEdit.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcSql.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/utility.h"
+#include <string.h>
+#include <sqlcpr.h>
+#include <stdio.h>
+
+#define AFFECTED_ROWS ((int)(sqlca.sqlerrd[2]))
+
+int report_client(int custID, const char* strDirectory)
+{
+	EXEC SQL BEGIN DECLARE SECTION;
+    char    InvNo[MAX_INVOICE_NUMBER_LENGHT] = {0};
+    float   Amount = 0.0f;
+    float   AmountDue = 0.0f;
+    char    Currency[MAX_LINE_CURRENCY_LENGHT] = {0};
+    char    IssueDate[MAX_DATE_2_LENGHT] ={0};
+    char    DueDate[MAX_DATE_2_LENGHT] = {0};
+    int     CustomerID = 0;
+    int     Seq = 0;
+    char    OriginalInvoiceID[MAX_INVOICE_NUMBER_LENGHT] = {0};
+    short   AmountDueInd = -1;
+    short   OrigInvNoInd = -1;
+    char    FirstName[MAX_NAME_LENGHT] = {0};
+    char    LastName[MAX_NAME_LENGHT] = {0};
+    char    ExtRef[MAX_EXTERNAL_REF_LENGHT] = {0};
+    EXEC SQL END DECLARE SECTION;
+
+    connect_oracle(USER_CONNECTION);
+    CustomerID = custID;
+
+    EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_7);
+    EXEC SQL SELECT first_name, family_name, external_reference 
+               INTO :FirstName, :LastName, :ExtRef 
+               FROM customers
+              WHERE customer_id = :CustomerID;
+    if (sqlca.sqlcode != 0)
+	{
+		OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+        OUTPUT_LOG_MSG(program.programName, "The customer does not exist!");
+        printf("The customer does not exist!\n");
+        return 0;
+    }
+    OUTPUT_LOG_MSG("Create report for customer_External_reference", ExtRef);
+    
+    char reportDirectory[MAX_SIZE_FILEPATH] = { 0 };
+    createDirectory(strDirectory, "/Report", reportDirectory);
+    OUTPUT_LOG_MSG(program.programName, "Create directory /Report");
+
+    char filePath[MAX_SIZE_FILEPATH] = { 0 };
+    fileInit(reportDirectory, filePath, "_CUSTOMER_");
+    FILE* reportFile = fileOpen(filePath, "w");
+  
+    fprintf(reportFile, "REPORT for\nCUSTOMER_ID: %d\nEXTERNAL_REFERENCE: %s\nFIRST_MANE: %s\nLAST_NAME: %s\n", CustomerID, ExtRef, FirstName, LastName);
+
+    EXEC SQL DECLARE c_select CURSOR FOR SELECT inv_no, amount, amount_due, currency, issue_date, due_date, customer_id, seq, original_invoice_id
+                                           FROM invoices
+                                          WHERE customer_id = :CustomerID;
+    if (sqlca.sqlcode != 0)
+	{
+		OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_7);
+        ERROR_PRINT(ORA_ERR_FORMAT_7);
+        return 0;
+    }
+
+    EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_8);
+    EXEC SQL OPEN c_select;
+    if (sqlca.sqlcode != 0)
+	{
+		OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_8);
+        ERROR_PRINT(ORA_ERR_FORMAT_8);
+        return 0;
+    }
+    OUTPUT_LOG_MSG(program.programName, ORA_MSG_FORMAT_11);
+
+    fprintf(reportFile, "\n");
+    fprintf(reportFile, "---------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+    fprintf(reportFile, "| INV_NO:              | AMOUNT:     | AMOUNT_DUE: | CURRENCY: | ISSUE_DATE:   | DUE_DATE:     | CUST_ID:  | SEQ:      | ORIGINAL_INVOICE_ID:| PAYMENT_STATUS |\n");
+    fprintf(reportFile, "---------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+    
+    EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_10);
+    EXEC SQL WHENEVER NOT FOUND DO break;
+
+    for (;;)
+	{
+        EXEC SQL FETCH c_select INTO :InvNo, :Amount, :AmountDue:AmountDueInd, :Currency, :IssueDate, :DueDate, :CustomerID, :Seq, :OriginalInvoiceID:OrigInvNoInd;
+        if (sqlca.sqlcode != 0)
+	    {
+		    OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_10);
+            ERROR_PRINT(ORA_ERR_FORMAT_10);
+       }
+
+        nullTerminateString(InvNo);
+        nullTerminateString(OriginalInvoiceID);
+        char isPayed[10] = {0};
+        if (AmountDue > 0)
+        {
+            strcpy(isPayed, "NOT PAYED");
+        }
+        else
+        {
+            strcpy(isPayed, "PAYED");
+        }
+
+        fprintf(reportFile, "| %20s |", InvNo);
+        fprintf(reportFile, "%12.2f |", Amount);
+        fprintf(reportFile, "%12.2f |", AmountDue);
+        fprintf(reportFile, "%10s |", Currency);
+        fprintf(reportFile, "%14s |", IssueDate);
+        fprintf(reportFile, "%14s |", DueDate);
+        fprintf(reportFile, "%10d |", CustomerID);
+        fprintf(reportFile, "%10d |", Seq);
+        fprintf(reportFile, "%20s |", OriginalInvoiceID);
+        fprintf(reportFile, "%15s |\n", isPayed);
+    }
+    fprintf(reportFile, "---------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+
+    EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_9);
+    EXEC SQL CLOSE c_select;
+    if (sqlca.sqlcode != 0)
+	{
+	    OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_9);
+        ERROR_PRINT(ORA_ERR_FORMAT_9);
+        return 0;
+    }
+    OUTPUT_LOG_MSG(program.programName, ORA_MSG_FORMAT_12);
+   
+    exec_commit_all();
+    fileClose(reportFile);
+	return 1;
+}
+
+int report_period(const char* strStartDate, const char* strEndDate,  const char* strDirectory)
+{
+    connect_oracle(USER_CONNECTION);
+
+    EXEC SQL BEGIN DECLARE SECTION;
+	    int		c_CustomerID = 0;
+	    char	c_FirstName[MAX_NAME_LENGHT] = {0};
+	    char	c_FamilytName[MAX_NAME_LENGHT] = {0};
+	    char	c_ExternalReference[MAX_EXTERNAL_REF_LENGHT] = {0};
+        int     rowsFetched = 0;
+        char    startDate[9] = {0};
+        char    endDate[9] = {0};
+    EXEC SQL END DECLARE SECTION;
+	
+    printf("Please, wait...\n");
+
+    strcpy(startDate, strStartDate);
+    strcpy(endDate, strEndDate);
+
+	EXEC SQL DECLARE dateRange_cursor 
+	CURSOR FOR SELECT first_name, family_name, customer_id, external_reference 
+	FROM customers
+	WHERE  customer_id NOT IN (
+		SELECT i.customer_id
+		FROM invoices i, payments p, customers c
+		WHERE i.inv_no = p.invoice_no
+		AND p.payment_dt BETWEEN TO_DATE(:startDate, 'DDMMYYYY','NLS_DATE_LANGUAGE=English') AND TO_DATE(:endDate, 'DDMMYYYY','NLS_DATE_LANGUAGE=English')
+		AND i.customer_id = c.customer_id
+		)
+	ORDER BY 3,1,2;
+
+
+    OUTPUT_LOG_MSG("Create report for period", "");
+    OUTPUT_LOG_MSG(strStartDate, strEndDate);
+		
+    char reportDirectory[MAX_SIZE_FILEPATH] = { 0 };
+    createDirectory(strDirectory, "/Report", reportDirectory);
+    OUTPUT_LOG_MSG(program.programName, "Create directory /Report");
+
+    char filePath[MAX_SIZE_FILEPATH] = { 0 };
+    fileInit(reportDirectory, filePath, "_PERIOD_");
+    FILE* reportFile = fileOpen(filePath, "w");
+
+    fprintf(reportFile, "REPORT for period: %s - %s\n", strStartDate, strEndDate);
+    EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_8);
+	EXEC SQL OPEN dateRange_cursor;
+    if (sqlca.sqlcode != 0)
+	{
+        OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_8);
+        ERROR_PRINT(ORA_ERR_FORMAT_8);
+    }
+	
+	OUTPUT_LOG_MSG(program.programName, ORA_MSG_FORMAT_11);
+	fprintf(reportFile, "\n");
+	fprintf(reportFile, "------------------------------------------------------------------------------------\n");
+	fprintf(reportFile, "|          FIRST_NAME:|           LAST_NAME:|    CUSTOMER_ID:|  EXTERNAL_REFERENCE:|\n");
+	fprintf(reportFile, "------------------------------------------------------------------------------------\n");
+
+    EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_10);
+	EXEC SQL WHENEVER NOT FOUND DO break;
+    for (;;)
+	{
+	    EXEC SQL FETCH dateRange_cursor INTO :c_FirstName, :c_FamilytName, :c_CustomerID, :c_ExternalReference;
+	     if (0 == sqlca.sqlcode) 
+        {
+		    if (sqlca.sqlerrd[2] <= 0 && rowsFetched == 0) 
+            {
+				fprintf(reportFile, "| %19s | %19s | %14s | %19s |\n", "N/A","N/A","N/A","N/A");
+				break;
+		    }else if (sqlca.sqlerrd[2] <= 0 && rowsFetched != 0)
+            {
+				break;
+            }
+	    }
+        else
+        {
+			if (rowsFetched == 0)
+			{
+			fprintf(reportFile, "| %19s | %19s | %14s | %19s |\n", "N/A","N/A","N/A","N/A");
+			}
+		    break;
+	    }
+
+		nullTerminateString(c_FirstName);
+		nullTerminateString(c_FamilytName);
+		nullTerminateString(c_ExternalReference);
+		
+        fprintf(reportFile, "| %19s | %19s | %14d | %19s |\n", c_FirstName, c_FamilytName, c_CustomerID, c_ExternalReference);
+        rowsFetched++;
+	}
+    fprintf(reportFile, "------------------------------------------------------------------------------------\n");
+    fprintf(reportFile,"Rows fetched: %d\n",rowsFetched);
+    printf("\nRows fetched: %d\n",rowsFetched);
+    EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_9);
+    EXEC SQL CLOSE dateRange_cursor;
+    if (sqlca.sqlcode != 0)
+	{
+        OUTPUT_LOG_MSG(program.programName, ORA_ERR_FORMAT_9);
+        ERROR_PRINT(ORA_ERR_FORMAT_9);
+    }
+	OUTPUT_LOG_MSG(program.programName, ORA_MSG_FORMAT_12);
+
+    exec_commit_all();
+    fileClose(reportFile);
+	return 1;
+}

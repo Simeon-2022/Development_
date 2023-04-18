@@ -1,0 +1,3 @@
+[ERROR][27-03-2023 19:10:32] PROG_INSERT_FILE: vecFilenames is empty. There is no files with correct name in the directory!
+[ERROR][27-03-2023 19:10:32] There is no file with this pattern in the directory! 	(Error code 0 - Success)
+	Error in line 28 in file ../1_Insert_Data_Program/mainInsertData.c

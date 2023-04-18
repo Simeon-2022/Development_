@@ -1,0 +1,164 @@
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Create directory .LogErr
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Initialize a vector vecFilenames to hold the correct filenames
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Fill the vector vecFilenames
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Connected to DB
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Open file
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Extract line 1 type 01 - Customer
+[23-03-2023 09:08:24] Updated customer: EXT3427
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:24] 01;;EXT3427;VALENTIN;MILANOV;m;SOFIA;BULGARIA;998;v-milanov@jjj.gg: Line is IMPORTED!
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Extract line 2 type 01 - Customer
+[23-03-2023 09:08:24] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Error during updating!
+[23-03-2023 09:08:24] 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg: Line is NOT IMPORTED!
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Print line in file .KO
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Extract line 3 type 02 - Invoice
+[23-03-2023 09:08:24] Insert new invoice for customer: EXT3427
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:24] 02;EXT3427;15022023;60.00;BGN: Line is IMPORTED!
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Extract line 4 type 02 - Invoice
+[23-03-2023 09:08:24] Insert new invoice for customer: EXT3427
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:24] 02;EXT3427;17022023;20.00;BGN: Line is IMPORTED!
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Extract line 5 type 03 - Payment
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:24] Insert new payment for customer: EXT3427
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:24] 03;EXT3427;16022023;70;BankTransf;BGN: Line is IMPORTED!
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Close file
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Close file .OK
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Close file .KO
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183755.txt: Move file to .back
+
+[23-03-2023 09:08:24] PROG_INSERT_FILE: IMP_CUSTOMER_DATA_20230214183755.txt have 5 row(s).
+[23-03-2023 09:08:24] PROG_INSERT_FILE: 4 row(s) are processed and copied in file .OK.
+[23-03-2023 09:08:24] PROG_INSERT_FILE: 1 row(s) have mistakes and they are not inserted in the database. They are copied in file .KO
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183758.txt: Open file
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 1 type 01 - Customer
+[23-03-2023 09:08:24] Updated customer: EXT3427
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:24] 01;;EXT3427;VALENTIN;MILANOV;m;SOFIA;BULGARIA;998;v-milanov@jjj.gg1;: Line is IMPORTED!
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 2 type 01 - Customer
+[23-03-2023 09:08:24] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Error during updating!
+[23-03-2023 09:08:24] 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg2;: Line is NOT IMPORTED!
+[23-03-2023 09:08:24] PROG_INSERT_FILE: Print line in file .KO
+
+[23-03-2023 09:08:24] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 3 type 01 - Customer
+[23-03-2023 09:08:25] Rollback transaction: ORA-00001: unique constraint (TEAM2.SYS_C008529) violated
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Error during updating!
+[23-03-2023 09:08:25] 01;79;EXT1473;IVELINA;SIMOVA;f;;BULGARIA;5000;ivvvv45@jjj.gg3;: Line is NOT IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .KO
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 4 type 02 - Invoice
+[23-03-2023 09:08:25] Insert new invoice for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 02;EXT3427;15022023;60.00;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 5 type 02 - Invoice
+[23-03-2023 09:08:25] Insert new invoice for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 02;EXT3427;17022023;20.00;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 6 type 03 - Payment
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] Insert new payment for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 03;EXT3427;16022023;71;BankTransf;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 7 type 03 - Payment
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] Insert new payment for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 03;EXT3427;16022023;72;BankTransf;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Extract line 8 type 03 - Payment
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] Insert new payment for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 03;EXT3427;16022023;73;BankTransf;BGN: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Close file
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Close file .OK
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Close file .KO
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183758.txt: Move file to .back
+
+[23-03-2023 09:08:25] PROG_INSERT_FILE: IMP_CUSTOMER_DATA_20230214183758.txt have 8 row(s).
+[23-03-2023 09:08:25] PROG_INSERT_FILE: 6 row(s) are processed and copied in file .OK.
+[23-03-2023 09:08:25] PROG_INSERT_FILE: 2 row(s) have mistakes and they are not inserted in the database. They are copied in file .KO
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Open file
+[23-03-2023 09:08:25] Line is NOT IMPORTED!: Contains wrong character in IntRef!
+[23-03-2023 09:08:25] 01; ;EXT3427;VALENTIN;MILANOV;m;SOFIA;BULGARIA;998;v-milanov@jjj.gg1;: Line is NOT IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .KO
+
+[23-03-2023 09:08:25] Line is NOT IMPORTED!: Contains wrong character in city!
+[23-03-2023 09:08:25] 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg2;: Line is NOT IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .KO
+
+[23-03-2023 09:08:25] Line is NOT IMPORTED!: Contains wrong character in city!
+[23-03-2023 09:08:25] 01;79;EXT1473;IVELINA;SIMOVA;f; ;BULGARIA;5000;ivvvv45@jjj.gg3;: Line is NOT IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .KO
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Extract line 4 type 02 - Invoice
+[23-03-2023 09:08:25] Insert new invoice for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 02;EXT3427;15022023;60.00;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Extract line 5 type 02 - Invoice
+[23-03-2023 09:08:25] Insert new invoice for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 02;EXT3427;17022023;20.00;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Extract line 6 type 03 - Payment
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] Insert new payment for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 03;EXT3427;16022023;71;BankTransf;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Extract line 7 type 03 - Payment
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] Insert new payment for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 03;EXT3427;16022023;72;BankTransf;BGN;: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Extract line 8 type 03 - Payment
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] Insert new payment for customer: EXT3427
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit transaction
+[23-03-2023 09:08:25] 03;EXT3427;16022023;73;BankTransf;BGN: Line is IMPORTED!
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Print line in file .OK
+
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Close file
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Close file .OK
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Close file .KO
+[23-03-2023 09:08:25] IMP_CUSTOMER_DATA_20230214183759.txt: Move file to .back
+
+[23-03-2023 09:08:25] PROG_INSERT_FILE: IMP_CUSTOMER_DATA_20230214183759.txt have 8 row(s).
+[23-03-2023 09:08:25] PROG_INSERT_FILE: 5 row(s) are processed and copied in file .OK.
+[23-03-2023 09:08:25] PROG_INSERT_FILE: 3 row(s) have mistakes and they are not inserted in the database. They are copied in file .KO
+
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Commit work release
+[23-03-2023 09:08:25] PROG_INSERT_FILE: Free the vector vecFilenames

@@ -1,0 +1,385 @@
+[18-04-2023 09:02:03] BATCH_OVERPAYMENT: Create directory .LogErr
+[18-04-2023 09:02:06] BATCH_OVERPAYMENT: Connected to DB
+
+[18-04-2023 09:02:06] BATCH_OVERPAYMENT: Open cursor
+[18-04-2023 09:02:06] Processing payment ID: 13026036                                                    
+[18-04-2023 09:02:07] Select invoice : 
+[18-04-2023 09:02:07] Processing payment ID: 13026027                                                    
+[18-04-2023 09:02:07] Select invoice : 
+[18-04-2023 09:02:07] Processing payment ID: 13026028                                                    
+[18-04-2023 09:02:07] Select invoice : 
+[18-04-2023 09:02:07] Processing payment ID: 13026029                                                    
+[18-04-2023 09:02:07] Select invoice : 
+[18-04-2023 09:02:07] Processing payment ID: 13026052                                                    
+[18-04-2023 09:02:08] Select invoice : 
+[18-04-2023 09:02:08] Processing payment ID: 13026031                                                    
+[18-04-2023 09:02:08] Select invoice : 
+[18-04-2023 09:02:08] Processing payment ID: 13026032                                                    
+[18-04-2023 09:02:08] Select invoice : 
+[18-04-2023 09:02:08] Processing payment ID: 13026056                                                    
+[18-04-2023 09:02:08] Select invoice : 
+[18-04-2023 09:02:08] Processing payment ID: 13026050                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026035                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026023                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026024                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026025                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026054                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026045                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026046                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026047                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026058                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026109                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026111                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026113                                                    
+[18-04-2023 09:02:09] Select invoice : 
+[18-04-2023 09:02:09] Processing payment ID: 13026115                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026124                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026126                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026128                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026130                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026139                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026141                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026143                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026145                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026154                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026156                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026158                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026160                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026169                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026171                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026173                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026175                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026184                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026186                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026188                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026190                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026199                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026201                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026203                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026205                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026215                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026217                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026219                                                    
+[18-04-2023 09:02:10] Select invoice : 
+[18-04-2023 09:02:10] Processing payment ID: 13026221                                                    
+[18-04-2023 09:02:11] Select invoice : 
+[18-04-2023 09:02:11] Processing payment ID: 13026498                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_396_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026496                                                    
+[18-04-2023 09:02:11] Select invoice : 
+[18-04-2023 09:02:11] Processing payment ID: 13026493                                                    
+[18-04-2023 09:02:11] Select invoice : 
+[18-04-2023 09:02:11] Processing payment ID: 13026502                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_396_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026483                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_398_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026484                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_400_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026500                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_402_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026504                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_402_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026506                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_404_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026508                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_404_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026510                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_406_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026512                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_408_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026514                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_408_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026516                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_410_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:11] Delete old record from table: Overpayment
+[18-04-2023 09:02:11] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:11] Processing payment ID: 13026518                                                    
+[18-04-2023 09:02:11] Select invoice : 3427_412_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:12] Delete old record from table: Overpayment
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:12] Processing payment ID: 13026520                                                    
+[18-04-2023 09:02:12] Select invoice : 3427_412_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:12] Delete old record from table: Overpayment
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:12] Processing payment ID: 13026522                                                    
+[18-04-2023 09:02:12] Select invoice : 3427_414_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:12] Delete old record from table: Overpayment
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:12] Processing payment ID: 13026524                                                    
+[18-04-2023 09:02:12] Select invoice : 3427_1_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:12] Delete old record from table: Overpayment
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:12] Processing payment ID: 13026526                                                    
+[18-04-2023 09:02:12] Select invoice : 3427_417_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:12] Delete old record from table: Overpayment
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:12] Processing payment ID: 13026528                                                    
+[18-04-2023 09:02:12] Select invoice : 3427_417_20230215
+
+Payments_test inserted 1 record(s).
+[18-04-2023 09:02:12] Delete old record from table: Overpayment
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Commit transaction
+[18-04-2023 09:02:12] Processing payment ID: 13026530                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026532                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026534                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026536                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026602                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026604                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026606                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026608                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Cursor not found: Break cycle
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Close cursor
+[18-04-2023 09:02:12] BATCH_OVERPAYMENT: Open cursor
+[18-04-2023 09:02:12] Processing payment ID: 13026036                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026027                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026028                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026029                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026052                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026031                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026032                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026056                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026050                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026035                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026023                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026024                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026025                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026054                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026045                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026046                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026047                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026058                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026109                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026111                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026113                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026115                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026124                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026126                                                    
+[18-04-2023 09:02:12] Select invoice : 
+[18-04-2023 09:02:12] Processing payment ID: 13026128                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026130                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026139                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026141                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026143                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026145                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026154                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026156                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026158                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026160                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026169                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026171                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026173                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026175                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026184                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026186                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026188                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026190                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026199                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026201                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026203                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026205                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026215                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026217                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026219                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026221                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026610                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026496                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026493                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026612                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026613                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026614                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026615                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026616                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026617                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026618                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026619                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026620                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026530                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026532                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026534                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026536                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026602                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026604                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026606                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026608                                                    
+[18-04-2023 09:02:13] Select invoice : 
+[18-04-2023 09:02:13] Processing payment ID: 13026609                                                    
+[18-04-2023 09:02:14] Select invoice : 
+[18-04-2023 09:02:14] Processing payment ID: 13026611                                                    
+[18-04-2023 09:02:14] Select invoice : 
+[18-04-2023 09:02:14] Cursor not found: Break cycle
+[18-04-2023 09:02:14] BATCH_OVERPAYMENT: Close cursor
+
+Payments_test inserted 18 record(s).
+[18-04-2023 09:02:14] BATCH_OVERPAYMENT: Commit work release
+[18-04-2023 09:02:14] BATCH_OVERPAYMENT: Program executed successfully!

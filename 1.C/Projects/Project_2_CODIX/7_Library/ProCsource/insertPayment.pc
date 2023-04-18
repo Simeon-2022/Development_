@@ -1,0 +1,83 @@
+#include "/media/sf_Shared/Final_project/7_Library/Headers/insertPayment.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcErrorHandling.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/funcSql.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/utility.h"
+#include "/media/sf_Shared/Final_project/7_Library/Headers/configMacro.h"
+#include <sqlca.h>
+#include <ctype.h>
+#include <sqlcpr.h>
+#include <stdlib.h>
+#include <string.h>
+#include <oraca.h>
+
+int insertPayment(struct sPayment* payment)
+{
+	EXEC SQL BEGIN DECLARE SECTION;
+    char c_external_reference[MAX_EXTERNAL_REF_LENGHT] = {0};
+    char c_payment_dt[MAX_DATE_LENGHT] = {0};
+    double d_amount = 0;
+    char c_payment_method[MAX_PEYMENT_METOD_LENGHT] = {0};
+    char c_currency[MAX_LINE_CURRENCY_LENGHT] = {0};
+    int i_customer_id = 0;
+    char c_inv_no[50] = {0};	
+    EXEC SQL END DECLARE SECTION;
+
+    //Copy values from payment structure to SQL variables 
+    strcpy(c_external_reference, payment->strExternaymentRef);
+    strcpy(c_payment_dt, payment->strPaymentDate);
+    strcpy(c_payment_method, payment->strPaymentMethod);
+    strcpy(c_currency, payment->cpCurrency);
+    d_amount = payment->dInvoiceAmt;
+
+	EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_5);
+
+    //Find the customer with the given external reference
+    EXEC SQL SELECT customer_id INTO :i_customer_id
+	FROM customers
+	WHERE external_reference = :c_external_reference;
+
+	if (sqlca.sqlcode != 0)
+	{
+		OUTPUT_LOG_MSG("Incorrect payment", "Customer does not exist");
+		ERROR_LOG_MSG("Incorrect payment", "Customer does not exist");
+        return 0;
+    }
+    // Find the customer's last invoice with the highest sequence number 
+    EXEC SQL SELECT inv_no INTO :c_inv_no
+	FROM (
+			SELECT inv_no
+			FROM invoices
+			WHERE customer_id = :i_customer_id
+			ORDER BY seq DESC
+		 )  
+	WHERE ROWNUM = 1;
+
+	if (sqlca.sqlcode != 0)
+	{				
+		ERROR_LOG_MSG("This customer does not have any invoice!", "");
+		OUTPUT_LOG_MSG("This customer does not have any invoice!", "");
+        return 0;
+    }
+	nullTerminateString(c_inv_no);
+
+	exec_commit();
+
+	EXEC SQL WHENEVER SQLERROR DO sql_error(ORA_ERR_FORMAT_5);
+
+    EXEC SQL INSERT INTO payments(invoice_no, payment_id,payment_dt, amount, payment_method, currency)
+    VALUES(:c_inv_no, payments_seq.nextval, TO_DATE(:c_payment_dt,'DDMMYYYY'), :d_amount, :c_payment_method, :c_currency);
+
+	if (sqlca.sqlcode == 0)
+	{
+		OUTPUT_LOG_MSG("Insert new payment for customer", c_external_reference);
+	}
+	else
+	{
+		OUTPUT_LOG_MSG("Insert payment failed for customer", c_external_reference);
+		ERROR_LOG_MSG("Insert payment failed for customer", c_external_reference);
+        return 0;
+    }
+
+	exec_commit();
+    return 1;
+}
