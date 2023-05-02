@@ -29,8 +29,8 @@ public:
 };
 
 BattleShip::BattleShip() {};
-BattleShip::BattleShip(int& health, int& attack) : m_health(health), m_shield(0), m_attack(attack) {};
-BattleShip::BattleShip(int& health, int& shield, int& attack) : m_health(health), m_shield(shield), m_attack(attack) {};
+//BattleShip::BattleShip(int& health, int& attack) : m_health(health), m_shield(0), m_attack(attack) {};
+//BattleShip::BattleShip(int& health, int& shield, int& attack) : m_health(health), m_shield(shield), m_attack(attack) {};
 BattleShip::~BattleShip() {};
 
 class Terran : public BattleShip
